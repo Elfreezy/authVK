@@ -14,7 +14,7 @@ class Config(object):
         user=os.environ.get('USER'),
         password=os.environ.get('PASSWORD'),
         host=os.environ.get('HOST'),
-        # port=os.environ.get('PORT'),
+        port=os.environ.get('PORT'),
         name=os.environ.get('DB_NAME'),
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
