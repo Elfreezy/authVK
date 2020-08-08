@@ -1,4 +1,4 @@
-from flask_login import UserMixin, logout_user
+from flask_login import UserMixin
 
 from app import db, login
 

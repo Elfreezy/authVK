@@ -1,4 +1,4 @@
-from flask import redirect, url_for
+from flask import redirect
 from rauth import OAuth2Service
 import requests
 
@@ -19,7 +19,7 @@ class VKSingIn():
         return redirect(self.service.get_authorize_url(
             scope='friends',
             response_type='code',
-            redirect_uri='http://localhost:5000/login',
+            redirect_uri=app.config['REDIRECT_URI'],
             v=5.122
         ))
 
@@ -29,7 +29,7 @@ class VKSingIn():
             &client_secret={client_secret}&redirect_uri={redirect_uri}&code={code}&v={v}'.format(
             client_id=app.config['CLIENT_ID'],
             client_secret=app.config['CLIENT_SECRET'],
-            redirect_uri='http://localhost:5000/login',
+            redirect_uri=app.config['REDIRECT_URI'],
             code=code,
             v=5.122
         ))
