@@ -24,8 +24,8 @@
     <div class="row">
         {% for friend in friends_id %}
         {% set url="https://vk.com/id{id}".format(id=friend.id) %}
-        <div class="col-2 col-sm-9">
-        <div class="card w-25">
+        <div class="col-2 col-sm-6">
+        <div class="card w-50">
             <img src="{{ friend.photo_200 }}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{ friend.first_name }} {{ friend.last_name }}</h5>
