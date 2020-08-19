@@ -21,10 +21,10 @@
 <div>
     <h4 class="mt-3">Друзья</h4>
 
-    <div class="card-deck" style="width: 65rem;">
+    <div class="card-deck">
         {% for friend in friends_id %}
         {% set url="https://vk.com/id{id}".format(id=friend.id) %}
-        <div class="card">
+        <div class="card" style="max-width: 10rem;">
             <img src="{{ friend.photo_200 }}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{ friend.first_name }} {{ friend.last_name }}</h5>
