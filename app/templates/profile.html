@@ -8,7 +8,7 @@
 {% block content %}
 
 <div class="row justify-content-md-center">
-    <div class="card" style="width: 12rem;">
+    <div class="card w-25">
       <img src="{{ current_user.image }}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{ current_user.first_name }} {{ current_user.last_name }}</h5>
@@ -25,7 +25,7 @@
         {% for friend in friends_id %}
         {% set url="https://vk.com/id{id}".format(id=friend.id) %}
         <div class="col-2 col-sm-9">
-        <div class="card">
+        <div class="card w-25">
             <img src="{{ friend.photo_200 }}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{ friend.first_name }} {{ friend.last_name }}</h5>
