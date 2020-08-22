@@ -17,7 +17,7 @@ class VKSingIn():
 
     def authorize(self):
         return redirect(self.service.get_authorize_url(
-            scope='friends',
+            scope='offline, friends',
             response_type='code',
             redirect_uri=app.config['REDIRECT_URI'],
             v=5.122

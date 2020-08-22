@@ -44,6 +44,11 @@ def logout():
 @app.route('/profile')
 @login_required
 def profile():
-    friends_id = get_friends(current_user.token)
+    try:
+        friends_id = get_friends(current_user.token)
+    except:
+        # Если токен устарел
+        return redirect(url_for('index'))
+
     return render_template('profile.html', friends_id=friends_id)
 
