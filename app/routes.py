@@ -48,7 +48,7 @@ def profile():
         friends_id = get_friends(current_user.token)
     except:
         # Если токен устарел
-        return redirect(url_for('index'))
+        return redirect(url_for('logout'))
 
     return render_template('profile.html', friends_id=friends_id)
 
